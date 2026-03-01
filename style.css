@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0b0f19;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 40px;
+    background: linear-gradient(to right, #1c2333, #0b0f19);
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.motto {
+    color: gold;
+    font-style: italic;
+}
+
+nav {
+    background-color: #111827;
+    padding: 15px;
+}
+
+nav a {
+    color: silver;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+.hero {
+    padding: 80px 20px;
+}
+
+footer {
+    background-color: #111827;
+    padding: 20px;
+    font-size: 14px;
+}
