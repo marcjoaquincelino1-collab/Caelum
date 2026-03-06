@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caelum Cybersecurity</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* ---------- General ---------- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #fff;
+}
+a { text-decoration: none; color: inherit; }
+header, nav, main, footer { padding: 20px; }
+
+/* ---------- Header ---------- */
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+header .logo {
+    max-width: 120px;
+    height: auto;
+}
+header h1 { margin: 10px 0 5px; font-size: 2rem; }
+header .motto { font-size: 1.2rem; color: #60a5fa; }
+
+/* ---------- Navigation ---------- */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    background: #0a192f;
+    padding: 15px 0;
+}
+nav a {
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+nav a:hover { background: #1e40af; }
+
+/* ---------- Main ---------- */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+.hero h2 { font-size: 1.8rem; margin-bottom: 15px; }
+.hero p { font-size: 1rem; line-height: 1.5; max-width: 700px; margin: auto; }
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px;
+}
+.card {
+    background: #112240;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 15px rgba(0, 180, 255, 0.3);
+}
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #0a192f;
+    font-size: 0.9rem;
+    color: #a1a1aa;
+}
+
+/* ---------- Auris AI Orb ---------- */
+#auris {
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: radial-gradient(circle,#60a5fa,#1e3a8a);
+    box-shadow: 0 0 20px #60a5fa,0 0 40px #1e40af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+}
+#auris img { width: 60%; height: 60%; border-radius: 50%; }
+#auris::after {
+    content:"";
+    width:0; height:0;
+}
+
+/* Chat Panel */
+#chat-panel {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    width: 300px;
+    max-width: 90%;
+    background: #112240;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #0ea5e9;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 9998;
+}
+#chat-header { background: #0a192f; color: white; padding: 10px; font-weight: bold; text-align: center; }
+#chat-messages { padding: 10px; height: 200px; overflow-y: auto; color: white; font-size: 14px; }
+.bubble { background: #1f4068; padding: 8px 12px; border-radius: 15px; margin-bottom: 8px; }
+.user-bubble { background: #2e86de; }
+#chat-input-area { display: flex; border-top: 1px solid #0a192f; }
+#chat-input { flex:1; padding:10px; border:none; outline:none; font-size:14px; background:#112240; color:white; }
+#send-btn, #report-btn { padding:10px; border:none; cursor:pointer; background:#0ea5e9; color:black; }
+#report-btn { background:#f87171; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px){
+    .section { flex-direction: column; align-items: center; }
+    header h1 { font-size: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Caelum Logo" class="logo">
+    <h1>Caelum Cybersecurity</h1>
+    <p class="motto">Elevate the Ordinary</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <section class="hero">
+        <h2>Welcome to Caelum Cybersecurity</h2>
+        <p>Your trusted partner in protecting digital spaces. We provide professional cybersecurity solutions with precision and care.</p>
+    </section>
+
+    <section class="section">
+        <div class="card">
+            <h3>Expert Protection</h3>
+            <p>Advanced security services tailored to your business needs.</p>
+        </div>
+        <div class="card">
+            <h3>24/7 Monitoring</h3>
+            <p>Continuous surveillance and threat analysis to keep you safe.</p>
+        </div>
+        <div class="card">
+            <h3>Consulting Services</h3>
+            <p>Professional advice to secure your systems and networks.</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>© 2026 Caelum Cybersecurity. All rights reserved.</p>
+</footer>
+
+<!-- Auris AI -->
+<div id="auris"><img src="mascot.png" alt="Auris"></div>
+<div id="chat-panel">
+    <div id="chat-header">Auris AI</div>
+    <div id="chat-messages">
+        <div class="bubble">Hello! I am Auris ✨ How can I assist you?</div>
+    </div>
+    <div id="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Type your message...">
+        <button id="send-btn">Send</button>
+        <button id="report-btn">Report</button>
+    </div>
+</div>
+
+<script>
+const auris = document.getElementById("auris");
+const chatPanel = document.getElementById("chat-panel");
+const messages = document.getElementById("chat-messages");
+const input = document.getElementById("chat-input");
+const sendBtn = document.getElementById("send-btn");
+const reportBtn = document.getElementById("report-btn");
+
+/* Orb follow */
+let orbX = window.innerWidth/2;
+let orbY = window.innerHeight/2;
+let mouseX = orbX;
+let mouseY = orbY;
+auris.style.left = orbX + "px";
+auris.style.top = orbY + "px";
+
+document.addEventListener("mousemove",(e)=>{ mouseX=e.clientX; mouseY=e.clientY; });
+document.addEventListener("touchmove",(e)=>{ mouseX=e.touches[0].clientX; mouseY=e.touches[0].clientY; });
+
+function animateOrb(){
+    const dx = mouseX - orbX;
+    const dy = mouseY - orbY;
+    const distance = Math.sqrt(dx*dx + dy*dy);
+    if(distance > 50){ orbX += dx*0.08; orbY += dy*0.08; }
+    auris.style.left = orbX + "px";
+    auris.style.top = orbY + "px";
+    requestAnimationFrame(animateOrb);
+}
+animateOrb();
+
+/* Click to toggle panel */
+auris.addEventListener("click", ()=>{
+    chatPanel.style.display = chatPanel.style.display === "flex" ? "none" : "flex";
+    chatPanel.style.flexDirection = "column";
+});
+
+/* Send message */
+function sendMessage(){
+    const msg = input.value.trim();
+    if(!msg) return;
+    const userBubble = document.createElement("div");
+    userBubble.className="bubble user-bubble";
+    userBubble.innerText=msg;
+    messages.appendChild(userBubble);
+    messages.scrollTop = messages.scrollHeight;
+    input.value="";
+    setTimeout(()=>{
+        const aiBubble = document.createElement("div");
+        aiBubble.className="bubble";
+        aiBubble.innerText="I am listening… 🔹 (Admin will review reports)";
+        messages.appendChild(aiBubble);
+        messages.scrollTop = messages.scrollHeight;
+    },500);
+}
+sendBtn.addEventListener("click", sendMessage);
+input.addEventListener("keypress", e=>{ if(e.key==="Enter") sendMessage(); });
+
+/* Report button */
+reportBtn.addEventListener("click", ()=>{
+    alert("Your message has been sent to the admin.");
+});
+</script>
+
+</body>
+</html>
